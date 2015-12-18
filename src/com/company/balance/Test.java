@@ -15,15 +15,15 @@ public class Test {
         cellWeight.put("B", 0.60f);
 
         // init pebbleWeightses
-        PebbleWeight[] pebbleWeights = new PebbleWeight[3];
+        PebbleWeight[] pebbleWeights = new PebbleWeight[4];
         pebbleWeights[0] = new PebbleWeight().addQuery("R", .1f).addQuery("G", .1f).addQuery("B", .8f);
-        pebbleWeights[1] = new PebbleWeight().addQuery("G", .1f).addQuery("G", .1f).addQuery("B", .8f);
+        pebbleWeights[1] = new PebbleWeight().addQuery("R", .1f).addQuery("G", .1f).addQuery("B", .8f);
         pebbleWeights[2] = new PebbleWeight().addQuery("R", .1f).addQuery("G", .1f).addQuery("B", .8f);
         pebbleWeights[3] = new PebbleWeight().addQuery("R", .1f).addQuery("G", .1f).addQuery("B", .8f);
 
         Balance algorithm = new Balance(cellWeight, pebbleWeights);
 
-        algorithm.run();
+        String[] result = algorithm.run();
     }
 
 }
