@@ -1,5 +1,7 @@
 package com.company.balance;
 
+import com.company.vis.BalanceFrame;
+
 /**
  * Created by Piotr on 15.12.2015.
  */
@@ -24,6 +26,9 @@ public class Test {
         Balance algorithm = new Balance(cellWeight, pebbleWeights);
 
         String[] result = algorithm.run();
+
+        BalanceFrame bf = new BalanceFrame();
+        bf.setVisible(true);
     }
 
 }
